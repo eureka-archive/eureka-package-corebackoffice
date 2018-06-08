@@ -1,0 +1,34 @@
+# ORM Config file
+
+comment:
+  author: %app.orm.comment.author%
+  copyright: %app.orm.comment.copyright%
+
+namespace:
+  data: %app.orm.base_namespace.data%
+  mapper: %app.orm.base_namespace.mapper%
+
+path:
+  data: %app.orm.base_path.data%
+  mapper: %app.orm.base_path.mapper%
+
+cache:
+  enable: %app.orm.cache.enable%
+  prefix: 'eureka.corebackoffice.user_admin'
+
+database:
+  config:  %app.database.common.name%
+  service: 'database.connection.common'
+  table:   'user_admin'
+  prefix:  'user_admin'
+
+class:
+  classname: 'User'
+
+joins:
+
+#  recipe_tag:
+#    config: recipe_tag
+#    type: many
+#    keys:
+#      recipe_id: true

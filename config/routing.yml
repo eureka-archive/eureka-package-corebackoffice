@@ -1,0 +1,39 @@
+##
+# Copyright (c) Romain Cottard
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+##
+
+# Routing file
+
+all:
+  # -- HOME ROUTING --
+  home:
+    route: /
+    controller: \Eureka\Package\CoreBackoffice\Controller\Home\HomeController::index
+
+  page404:
+    route: /page404
+    controller: \Eureka\Package\CoreBackoffice\Controller\Error\ErrorController::page404
+
+  page500:
+    route: /page500
+    controller: \Eureka\Package\CoreBackoffice\Controller\Error\ErrorController::page500
+
+  # -- USER --
+  user_login:
+    route: /user/login
+    controller: \Eureka\Package\CoreBackoffice\Controller\User\LoginController::loginAction
+
+  user_logout:
+    route: /user/logout
+    controller: \Eureka\Package\CoreBackoffice\Controller\User\LoginController::logoutAction
+
+  essential_oil_list:
+    route: /essential-oil/list
+    controller: \Eureka\Package\CoreBackoffice\Controller\Home\HomeController::index
+
+  essential_oil_create:
+    route: /essential-oil/create
+    controller: \Eureka\Package\CoreBackoffice\Controller\Home\HomeController::index

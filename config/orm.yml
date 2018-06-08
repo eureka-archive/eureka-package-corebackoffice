@@ -1,0 +1,17 @@
+# eureka-package-corebackoffice ORM Config file
+
+all:
+  comment:
+    author: 'Romain Cottard'
+    copyright: 'Romain Cottard'
+
+  base_namespace:
+    data: 'Eureka\Package\CoreBackoffice\Domain\User\Entity'
+    mapper: 'Eureka\Package\CoreBackoffice\Domain\User\Infrastructure\Mapper'
+
+  base_path:
+    data:   '__DIR__/../src/Domain/User/Entity'
+    mapper: '__DIR__/../src/Domain/User/Infrastructure/Mapper'
+
+  cache:
+    enable: false

@@ -1,0 +1,24 @@
+{
+  "name": "eureka/eureka-package-corebackoffice",
+  "description": "Core backoffice package for Eureka Framework",
+  "type": "library",
+  "license": "MIT",
+
+  "authors": [
+    {
+      "name": "Romain Cottard",
+      "role": "Developer"
+    }
+
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "Eureka\\Package\\CoreBackoffice\\": "./src"
+    }
+  },
+
+  "require": {
+    "eureka/component-password": "^1.0"
+  }
+}

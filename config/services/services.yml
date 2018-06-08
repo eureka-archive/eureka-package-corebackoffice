@@ -1,0 +1,26 @@
+##
+# Copyright (c) Romain Cottard
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+#
+#  # Class added in container in index.php
+#  config:
+#    class: \Eureka\Component\Config\Config
+##
+
+all:
+  password:
+    class: \Eureka\Component\Password\Password
+
+  user.repository:
+    class: \Eureka\Package\CoreBackoffice\Domain\User\Infrastructure\Mapper\UserMapper
+    params:
+      - "@database.connection.common"
+
+  user.login:
+    class: \Eureka\Package\CoreBackoffice\Domain\User\Service\UserLogin
+    params:
+      - "@user.repository"
+      - "@password"
+
